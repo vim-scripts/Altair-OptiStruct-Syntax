@@ -1,0 +1,4 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=1447
+
+8 Field formatting for editing Altair OptiStruct decks - you'll never again need to add another "$......><......><......><......><......><......>" line when editing an OptiStruct deck . The syntax shows the 8 field spacing with coloured fields.
+It is also recommended that this syntax be used for editing nastran files - its much more useful than the nastran syntax!!
