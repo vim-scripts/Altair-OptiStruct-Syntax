@@ -112,7 +112,91 @@
 :syntax match OSField10 /^................................................................................/hs=s+72 contains=OSField9
 
 " 16 field cards
-":syntax match OS16Field1 /\%8c......../ 
+:syntax match OS16Field1 /.*\*.*\&./ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad contained
+:syntax match OS16Field1 /.*\*.*\&../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad contained
+:syntax match OS16Field1 /.*\*.*\&.../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad contained
+:syntax match OS16Field1 /.*\*.*\&..../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad contained
+:syntax match OS16Field1 /.*\*.*\&...../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad contained
+:syntax match OS16Field1 /.*\*.*\&....../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad contained
+:syntax match OS16Field1 /.*\*.*\&......./ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad contained
+:syntax match OS16Field1 /.*\*.*\&......../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad contained
+
+:syntax match OS16Field2 /.*\*.*\&^........./hs=s+8 contains=OS16Field1 
+:syntax match OS16Field2 /.*\*.*\&^........../hs=s+8 contains=OS16Field1 
+:syntax match OS16Field2 /.*\*.*\&^.........../hs=s+8 contains=OS16Field1 
+:syntax match OS16Field2 /.*\*.*\&^............/hs=s+8 contains=OS16Field1 
+:syntax match OS16Field2 /.*\*.*\&^............./hs=s+8 contains=OS16Field1 
+:syntax match OS16Field2 /.*\*.*\&^............../hs=s+8 contains=OS16Field1 
+:syntax match OS16Field2 /.*\*.*\&^.............../hs=s+8 contains=OS16Field1 
+:syntax match OS16Field2 /.*\*.*\&^................/hs=s+8 contains=OS16Field1 
+:syntax match OS16Field2 /.*\*.*\&^................./hs=s+8 contains=OS16Field1 
+:syntax match OS16Field2 /.*\*.*\&^................../hs=s+8 contains=OS16Field1 
+:syntax match OS16Field2 /.*\*.*\&^.................../hs=s+8 contains=OS16Field1 
+:syntax match OS16Field2 /.*\*.*\&^..................../hs=s+8 contains=OS16Field1 
+:syntax match OS16Field2 /.*\*.*\&^...................../hs=s+8 contains=OS16Field1 
+:syntax match OS16Field2 /.*\*.*\&^....................../hs=s+8 contains=OS16Field1 
+:syntax match OS16Field2 /.*\*.*\&^......................./hs=s+8 contains=OS16Field1 
+:syntax match OS16Field2 /.*\*.*\&^......................../hs=s+8 contains=OS16Field1 
+
+:syntax match OS16Field3 /.*\*.*\&^........................./hs=s+8 contains=OS16Field2
+:syntax match OS16Field3 /.*\*.*\&^........................../hs=s+8 contains=OS16Field2
+:syntax match OS16Field3 /.*\*.*\&^.........................../hs=s+8 contains=OS16Field2
+:syntax match OS16Field3 /.*\*.*\&^............................/hs=s+8 contains=OS16Field2
+:syntax match OS16Field3 /.*\*.*\&^............................./hs=s+8 contains=OS16Field2
+:syntax match OS16Field3 /.*\*.*\&^............................../hs=s+8 contains=OS16Field2
+:syntax match OS16Field3 /.*\*.*\&^.............................../hs=s+8 contains=OS16Field2
+:syntax match OS16Field3 /.*\*.*\&^................................/hs=s+8 contains=OS16Field2
+:syntax match OS16Field3 /.*\*.*\&^................................./hs=s+8 contains=OS16Field2
+:syntax match OS16Field3 /.*\*.*\&^................................../hs=s+8 contains=OS16Field2
+:syntax match OS16Field3 /.*\*.*\&^.................................../hs=s+8 contains=OS16Field2
+:syntax match OS16Field3 /.*\*.*\&^..................................../hs=s+8 contains=OS16Field2
+:syntax match OS16Field3 /.*\*.*\&^...................................../hs=s+8 contains=OS16Field2
+:syntax match OS16Field3 /.*\*.*\&^....................................../hs=s+8 contains=OS16Field2
+:syntax match OS16Field3 /.*\*.*\&^......................................./hs=s+8 contains=OS16Field2
+:syntax match OS16Field3 /.*\*.*\&^......................................../hs=s+8 contains=OS16Field2
+
+:syntax match OS16Field4 /.*\*.*\&^........................................./hs=s+8 contains=OS16Field3
+:syntax match OS16Field4 /.*\*.*\&^........................................../hs=s+8 contains=OS16Field3
+:syntax match OS16Field4 /.*\*.*\&^.........................................../hs=s+8 contains=OS16Field3
+:syntax match OS16Field4 /.*\*.*\&^............................................/hs=s+8 contains=OS16Field3
+:syntax match OS16Field4 /.*\*.*\&^............................................./hs=s+8 contains=OS16Field3
+:syntax match OS16Field4 /.*\*.*\&^............................................../hs=s+8 contains=OS16Field3
+:syntax match OS16Field4 /.*\*.*\&^.............................................../hs=s+8 contains=OS16Field3
+:syntax match OS16Field4 /.*\*.*\&^................................................/hs=s+8 contains=OS16Field3
+:syntax match OS16Field4 /.*\*.*\&^................................................./hs=s+8 contains=OS16Field3
+:syntax match OS16Field4 /.*\*.*\&^................................................../hs=s+8 contains=OS16Field3
+:syntax match OS16Field4 /.*\*.*\&^.................................................../hs=s+8 contains=OS16Field3
+:syntax match OS16Field4 /.*\*.*\&^..................................................../hs=s+8 contains=OS16Field3
+:syntax match OS16Field4 /.*\*.*\&^...................................................../hs=s+8 contains=OS16Field3
+:syntax match OS16Field4 /.*\*.*\&^....................................................../hs=s+8 contains=OS16Field3
+:syntax match OS16Field4 /.*\*.*\&^......................................................./hs=s+8 contains=OS16Field3
+:syntax match OS16Field4 /.*\*.*\&^......................................................../hs=s+8 contains=OS16Field3
+
+:syntax match OS16Field5 /.*\*.*\&^........................................................./hs=s+8 contains=OS16Field4
+:syntax match OS16Field5 /.*\*.*\&^........................................................../hs=s+8 contains=OS16Field4
+:syntax match OS16Field5 /.*\*.*\&^.........................................................../hs=s+8 contains=OS16Field4
+:syntax match OS16Field5 /.*\*.*\&^............................................................/hs=s+8 contains=OS16Field4
+:syntax match OS16Field5 /.*\*.*\&^............................................................./hs=s+8 contains=OS16Field4
+:syntax match OS16Field5 /.*\*.*\&^............................................................../hs=s+8 contains=OS16Field4
+:syntax match OS16Field5 /.*\*.*\&^.............................................................../hs=s+8 contains=OS16Field4
+:syntax match OS16Field5 /.*\*.*\&^................................................................/hs=s+8 contains=OS16Field4
+:syntax match OS16Field5 /.*\*.*\&^................................................................./hs=s+8 contains=OS16Field4
+:syntax match OS16Field5 /.*\*.*\&^................................................................../hs=s+8 contains=OS16Field4
+:syntax match OS16Field5 /.*\*.*\&^.................................................................../hs=s+8 contains=OS16Field4
+:syntax match OS16Field5 /.*\*.*\&^..................................................................../hs=s+8 contains=OS16Field4
+:syntax match OS16Field5 /.*\*.*\&^...................................................................../hs=s+8 contains=OS16Field4
+:syntax match OS16Field5 /.*\*.*\&^....................................................................../hs=s+8 contains=OS16Field4
+:syntax match OS16Field5 /.*\*.*\&^......................................................................./hs=s+8 contains=OS16Field4
+:syntax match OS16Field5 /.*\*.*\&^......................................................................../hs=s+8 contains=OS16Field4
+
+:syntax match OS16Field6 /.*\*.*\&^........................................................................./hs=s+8 contains=OS16Field5
+:syntax match OS16Field6 /.*\*.*\&^........................................................................../hs=s+8 contains=OS16Field5
+:syntax match OS16Field6 /.*\*.*\&^.........................................................................../hs=s+8 contains=OS16Field5
+:syntax match OS16Field6 /.*\*.*\&^............................................................................/hs=s+8 contains=OS16Field5
+:syntax match OS16Field6 /.*\*.*\&^............................................................................./hs=s+8 contains=OS16Field5
+:syntax match OS16Field6 /.*\*.*\&^............................................................................../hs=s+8 contains=OS16Field5
+:syntax match OS16Field6 /.*\*.*\&^.............................................................................../hs=s+8 contains=OS16Field5
+:syntax match OS16Field6 /.*\*.*\&^................................................................................/hs=s+8 contains=OS16Field5
 
 " Free format (csv)
 :syntax match OSFreeFormat2 /,/
@@ -129,12 +213,104 @@
 " Unconained Cards
 :syntax match OSScreen /^ \{}SCREEN.*$/
 
+" Design Equations
+:syntax match OSDeqatn1 /^DEQATN.*\&^./
+:syntax match OSDeqatn1 /^DEQATN.*\&^../
+:syntax match OSDeqatn1 /^DEQATN.*\&^.../
+:syntax match OSDeqatn1 /^DEQATN.*\&^..../
+:syntax match OSDeqatn1 /^DEQATN.*\&^...../
+:syntax match OSDeqatn1 /^DEQATN.*\&^....../
+:syntax match OSDeqatn1 /^DEQATN.*\&^......./
+:syntax match OSDeqatn1 /^DEQATN.*\&^......../
+
+:syntax match OSDeqatn2 /^DEQATN.*\&^........./hs=s+8 contains=OSDeqatn1 
+:syntax match OSDeqatn2 /^DEQATN.*\&^........../hs=s+8 contains=OSDeqatn1 
+:syntax match OSDeqatn2 /^DEQATN.*\&^.........../hs=s+8 contains=OSDeqatn1 
+:syntax match OSDeqatn2 /^DEQATN.*\&^............/hs=s+8 contains=OSDeqatn1 
+:syntax match OSDeqatn2 /^DEQATN.*\&^............./hs=s+8 contains=OSDeqatn1 
+:syntax match OSDeqatn2 /^DEQATN.*\&^............../hs=s+8 contains=OSDeqatn1 
+:syntax match OSDeqatn2 /^DEQATN.*\&^.............../hs=s+8 contains=OSDeqatn1 
+:syntax match OSDeqatn2 /^DEQATN.*\&^................/hs=s+8 contains=OSDeqatn1 
+
+:syntax match OSDeqatn3 /^DEQATN.*\&^................./hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^.................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^..................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^...................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^....................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^......................./hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^......................../hs=s+8 contains=OSDeqatn2
+
+:syntax match OSDeqatn3 /^DEQATN.*\&^........................./hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^........................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^.........................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^............................/hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^............................./hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^............................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^.............................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^................................/hs=s+8 contains=OSDeqatn2
+
+:syntax match OSDeqatn3 /^DEQATN.*\&^................................./hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^................................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^.................................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^..................................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^...................................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^....................................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^......................................./hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^......................................../hs=s+8 contains=OSDeqatn2
+
+:syntax match OSDeqatn3 /^DEQATN.*\&^........................................./hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^........................................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^.........................................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^............................................/hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^............................................./hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^............................................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^.............................................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^................................................/hs=s+8 contains=OSDeqatn2
+
+:syntax match OSDeqatn3 /^DEQATN.*\&^................................................./hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^................................................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^.................................................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^..................................................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^...................................................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^....................................................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^......................................................./hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^......................................................../hs=s+8 contains=OSDeqatn2
+
+:syntax match OSDeqatn3 /^DEQATN.*\&^........................................................./hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^........................................................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^.........................................................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^............................................................/hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^............................................................./hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^............................................................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^.............................................................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^................................................................/hs=s+8 contains=OSDeqatn2
+
+:syntax match OSDeqatn3 /^DEQATN.*\&^................................................................./hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^................................................................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^.................................................................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^..................................................................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^...................................................................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^....................................................................../hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^......................................................................./hs=s+8 contains=OSDeqatn2
+:syntax match OSDeqatn3 /^DEQATN.*\&^......................................................................../hs=s+8 contains=OSDeqatn2
+
+:syntax match OSDeqatn4 /^DEQATN.*\&^........................................................................./hs=s+8 contains=OSDeqatn3
+:syntax match OSDeqatn4 /^DEQATN.*\&^........................................................................../hs=s+8 contains=OSDeqatn3
+:syntax match OSDeqatn4 /^DEQATN.*\&^.........................................................................../hs=s+8 contains=OSDeqatn3
+:syntax match OSDeqatn4 /^DEQATN.*\&^............................................................................/hs=s+8 contains=OSDeqatn3
+:syntax match OSDeqatn4 /^DEQATN.*\&^............................................................................./hs=s+8 contains=OSDeqatn3
+:syntax match OSDeqatn4 /^DEQATN.*\&^............................................................................../hs=s+8 contains=OSDeqatn3
+:syntax match OSDeqatn4 /^DEQATN.*\&^.............................................................................../hs=s+8 contains=OSDeqatn3
+:syntax match OSDeqatn4 /^DEQATN.*\&^................................................................................/hs=s+8 contains=OSDeqatn3
+
 " Set colours
 :highlight OSFreeFormat1 term=standout ctermfg=0 ctermbg=7 guifg=DarkGreen guibg=White
 :highlight OSFreeFormat2 term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Grey
 
 " 16 Field
-":highlight OS16Field1 term=standout ctermfg=0 ctermbg=7 guifg=DarkGreen guibg=Yellow
+:highlight OS16Field1 term=standout ctermfg=0 ctermbg=7 guifg=DarkGreen guibg=White
+:highlight OS16Field2 term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Grey
 
 :highlight OSBeginBulk term=standout ctermfg=1 ctermbg=7 guifg=Black guibg=Red
 
@@ -163,6 +339,12 @@
 :highlight OSField1 term=standout ctermfg=0 ctermbg=7 guifg=DarkGreen guibg=White
 :highlight OSField2 term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Grey
 
+" Design Equations
+:highlight link OSDeqatn1 OSField1
+:highlight link OSDeqatn2 OSField2
+:highlight link OSDeqatn3 OSDeqatn1
+:highlight link OSDeqatn4 OSDeqatn2
+
 " Link colours
 :highlight link OSField3 OSField1
 :highlight link OSField4 OSField2
@@ -172,6 +354,11 @@
 :highlight link OSField8 OSField2
 :highlight link OSField9 OSField1
 :highlight link OSField10 OSField2
+
+:highlight link OS16Field3 OS16Field1
+:highlight link OS16Field4 OS16Field2
+:highlight link OS16Field5 OS16Field1
+:highlight link OS16Field6 OS16Field2
 
 :highlight link OSEndData OSBeginBulk
 
