@@ -1,7 +1,7 @@
 " Vim syntax file 
 " For: Altair OptiStruct - Finite Element Analysis & Optimisation Solver
 " http://www.altairengineering.co.uk/
-" January 29, 2006
+" February 15, 2006
 " by S.Patten
 " ----------------------------------------------------------------------
 " 
@@ -12,32 +12,34 @@
 
 " Contained Bulk Data Cards
 :syntax match OSParam /^PARAM \{0,3}/
-:syntax match OSLoad /^LOAD \{0,4}/
-:syntax match OSMPC /^MPC \{0,5}/
-:syntax match OSEIGRL /^EIGRL \{0,3}/
-:syntax match OSSPC /^SPC \{0,5}/
-:syntax match OSTemp /^TEMP \{0,4}/
-:syntax match OSSuport /^SUPORT \{0,2}/
-:syntax match OSSuport1 /^SUPORT1 \{0,1}/
-:syntax match OSForce /^FORCE \{0,3}/
-:syntax match OSMoment /^MOMENT \{0,2}/
-:syntax match OSSubcase /^SUBCASE \{0,1}/
-:syntax match OSMethod /^METHOD \{0,2}/
-:syntax match OSTLoad /^DLOAD \{0,3}/
-:syntax match OSDLoad /^TLOAD \{0,3}/
+:syntax match OSLoad /^ \{0,2}LOAD \{0,4}/
+:syntax match OSMPC /^ \{0,2}MPC \{0,5}/
+:syntax match OSEIGRL /^ \{0,2}EIGRL \{0,3}/
+:syntax match OSSPC /^ \{0,2}SPC \{0,5}/
+:syntax match OSTemp /^ \{0,2}TEMP \{0,4}/
+:syntax match OSSuport /^ \{0,2}SUPORT \{0,2}/
+:syntax match OSSuport1 /^ \{0,2}SUPORT1 \{0,1}/
+:syntax match OSForce /^ \{0,2}FORCE \{0,3}/
+:syntax match OSMoment /^ \{0,2}MOMENT \{0,2}/
+:syntax match OSSubcase /^ \{0,2}SUBCASE \{0,1}/
+:syntax match OSMethod /^ \{0,2}METHOD \{0,2}/
+:syntax match OSTLoad /^ \{0,2}DLOAD \{0,3}/
+:syntax match OSDLoad /^ \{0,2}TLOAD \{0,3}/
+:syntax match OSNLParm /^ \{0,2}NLPARM \{0,2}/
+:syntax match OSWeight /^ \{0,2}WEIGHT \{0,2}/
 
 " List all cards to be included
 " OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment
 
 " Fixed 8 field data
-:syntax match OSField1 /^./ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad
-:syntax match OSField1 /^../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad
-:syntax match OSField1 /^.../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad
-:syntax match OSField1 /^..../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad
-:syntax match OSField1 /^...../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad
-:syntax match OSField1 /^....../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad
-:syntax match OSField1 /^......./ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad
-:syntax match OSField1 /^......../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad
+:syntax match OSField1 /^./ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad,OSNLParm,OSWeight
+:syntax match OSField1 /^../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad,OSNLParm,OSWeight
+:syntax match OSField1 /^.../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad,OSNLParm,OSWeight
+:syntax match OSField1 /^..../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad,OSNLParm,OSWeight
+:syntax match OSField1 /^...../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad,OSNLParm,OSWeight
+:syntax match OSField1 /^....../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad,OSNLParm,OSWeight
+:syntax match OSField1 /^......./ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad,OSNLParm,OSWeight
+:syntax match OSField1 /^......../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad,OSNLParm,OSWeight
 :syntax match OSField2 /^........./hs=s+8 contains=OSField1 
 :syntax match OSField2 /^........../hs=s+8 contains=OSField1 
 :syntax match OSField2 /^.........../hs=s+8 contains=OSField1 
@@ -112,14 +114,14 @@
 :syntax match OSField10 /^................................................................................/hs=s+72 contains=OSField9
 
 " 16 field cards
-:syntax match OS16Field1 /.*\*.*\&./ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad contained
-:syntax match OS16Field1 /.*\*.*\&../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad contained
-:syntax match OS16Field1 /.*\*.*\&.../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad contained
-:syntax match OS16Field1 /.*\*.*\&..../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad contained
-:syntax match OS16Field1 /.*\*.*\&...../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad contained
-:syntax match OS16Field1 /.*\*.*\&....../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad contained
-:syntax match OS16Field1 /.*\*.*\&......./ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad contained
-:syntax match OS16Field1 /.*\*.*\&......../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad contained
+:syntax match OS16Field1 /.*\*.*\&./ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad,OSNLParm,OSWeight contained
+:syntax match OS16Field1 /.*\*.*\&../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad,OSNLParm,OSWeight contained
+:syntax match OS16Field1 /.*\*.*\&.../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad,OSNLParm,OSWeight contained
+:syntax match OS16Field1 /.*\*.*\&..../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad,OSNLParm,OSWeight contained
+:syntax match OS16Field1 /.*\*.*\&...../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad,OSNLParm,OSWeight contained
+:syntax match OS16Field1 /.*\*.*\&....../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad,OSNLParm,OSWeight contained
+:syntax match OS16Field1 /.*\*.*\&......./ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad,OSNLParm,OSWeight contained
+:syntax match OS16Field1 /.*\*.*\&......../ contains=OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad,OSNLParm,OSWeight contained
 
 :syntax match OS16Field2 /.*\*.*\&^........./hs=s+8 contains=OS16Field1 
 :syntax match OS16Field2 /.*\*.*\&^........../hs=s+8 contains=OS16Field1 
@@ -200,7 +202,7 @@
 
 " Free format (csv)
 :syntax match OSFreeFormat2 /,/
-:syntax match OSFreeFormat1 /.*,.*/ contains=OSFreeFormat2,OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad
+:syntax match OSFreeFormat1 /.*,.*/ contains=OSFreeFormat2,OSParam,OSLoad,OSMPC,OSEIGRL,OSSPC,OSTemp,OSSuport,OSSuport1,OSForce,OSMoment,OSSubcase,OSMethod,OSDLoad,OSTLoad,OSNLParm,OSWeight
 
 
 " Highlight specific cards
@@ -212,6 +214,36 @@
 
 " Unconained Cards
 :syntax match OSScreen /^ \{}SCREEN.*$/
+:syntax match OSFormat /^ \{}FORMAT.*$/
+:syntax match OSESE /^ \{}ESE.*$/
+:syntax match OSDisp /^ \{}DISP.*$/
+:syntax match OSStress /^ \{}STRESS.*$/
+:syntax match OSCStress /^ \{}CSTRESS.*$/
+:syntax match OSStrain /^ \{}STRAIN.*$/
+:syntax match OSLabel /^ \{}LABEL.*$/
+:syntax match OSTitle /^ \{}TITLE.*$/
+:syntax match OSSPCForce /^ \{}SPCFORCE.*$/
+" Uncontained optimisation cards
+:syntax match OSDESOBJ /^DESOBJ.*$/
+:syntax match OSDESGLB /^DESGLB.*$/
+:syntax match OSDESSUB /^DESSUB.*$/
+:syntax match OSMAXMIN /^MAXMIN.*$/
+:syntax match OSMINMAX /^MINMAX.*$/
+:syntax match OSMODEWEIGHT /^MODEWEIGHT.*$/
+:syntax match OSNORM /^NORM/
+" Uncontained Superelement Cards
+:syntax match OSK2GG /^K2GG.*$/
+:syntax match OSM2GG /^M2GG.*$/
+:syntax match OSB2GG /^B2GG.*$/
+:syntax match OSP2G /^P2G.*$/
+" Uncontained Eigenvalue cards
+:syntax match OSEigvsave /^EIGVSAVE.*$/
+:syntax match OSEigretrieve /^EIGRETRIEVE.*$/
+:syntax match OSFreequency /^FREQUENCY.*$/
+:syntax match OSSDamping /^SDAMPING.*$/
+" Uncontained Buckling cards
+:syntax match OSStatsub /^ \{0,2}STATSUB.*$/
+
 
 " Design Equations
 :syntax match OSDeqatn1 /^DEQATN.*\&^./
@@ -304,6 +336,22 @@
 :syntax match OSDeqatn4 /^DEQATN.*\&^.............................................................................../hs=s+8 contains=OSDeqatn3
 :syntax match OSDeqatn4 /^DEQATN.*\&^................................................................................/hs=s+8 contains=OSDeqatn3
 
+" Includes
+:syntax match OSInclude1 /^INCLUDE .*\&^./
+:syntax match OSInclude1 /^INCLUDE .*\&^../
+:syntax match OSInclude1 /^INCLUDE .*\&^.../
+:syntax match OSInclude1 /^INCLUDE .*\&^..../
+:syntax match OSInclude1 /^INCLUDE .*\&^...../
+:syntax match OSInclude1 /^INCLUDE .*\&^....../
+:syntax match OSInclude1 /^INCLUDE .*\&^......./
+:syntax match OSInclude1 /^INCLUDE .*\&^......../
+:syntax match OSInclude2 /^INCLUDE .*\&^.*/hs=s+8 contains=OSInclude1
+
+" Folding
+" :syn sync fromstart
+" :set foldmethod=syntax
+" :syn match OSGrid "\GRID.*" fold transparent extend
+
 " Set colours
 :highlight OSFreeFormat1 term=standout ctermfg=0 ctermbg=7 guifg=DarkGreen guibg=White
 :highlight OSFreeFormat2 term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Grey
@@ -312,21 +360,55 @@
 :highlight OS16Field1 term=standout ctermfg=0 ctermbg=7 guifg=DarkGreen guibg=White
 :highlight OS16Field2 term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Grey
 
-:highlight OSBeginBulk term=standout ctermfg=1 ctermbg=7 guifg=Black guibg=Red
+:highlight OSBeginBulk term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Red
+
+" Case Cards
+:highlight OSScreen term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow
+:highlight OSFormat term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow
+:highlight OSESE term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow
+:highlight OSDisp term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow
+:highlight OSStress term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow
+:highlight OSCStress term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow
+:highlight OSStrain term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow
+:highlight OSLabel term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow
+:highlight OSTitle term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow
+:highlight OSSPCForce term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow
+" Uncontained cards
+:highlight OSDESOBJ term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow
+:highlight OSDESGLB term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow 
+:highlight OSDESSUB term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow
+:highlight OSMAXMIN term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow
+:highlight OSMINMAX term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow
+:highlight OSMODEWEIGHT term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow
+:highlight OSNORM term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow
+" Uncontained Superelement Cards
+:highlight OSK2GG term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow
+:highlight OSM2GG term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow
+:highlight OSB2GG term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow
+:highlight OSP2G term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow
+" Uncontained Eigenvalue cards
+:highlight OSEigvsave term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow
+:highlight OSEigretrieve term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow
+:highlight OSFreequency term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow
+:highlight OSSDamping term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow
+" Uncontained Buckling cards
+:highlight OSStatsub term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow
 
 " Contained Cards
-:highlight OSParam term=standout ctermfg=1 ctermbg=7 guifg=Black guibg=Yellow
-:highlight OSLoad term=standout ctermfg=1 ctermbg=7 guifg=Black guibg=Orange
-:highlight OSEIGRL term=standout ctermfg=1 ctermbg=7 guifg=Black guibg=Blue
-:highlight OSSPC term=standout ctermfg=1 ctermbg=7 guifg=Black guibg=Red
-:highlight OSMPC term=standout ctermfg=1 ctermbg=7 guifg=Black guibg=LightGreen
-:highlight OSTemp term=standout ctermfg=1 ctermbg=7 guifg=Black guibg=Green
-:highlight OSSuport term=standout ctermfg=1 ctermbg=7 guifg=Black guibg=SeaGreen
+:highlight OSParam term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Yellow
+:highlight OSLoad term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Orange
+:highlight OSEIGRL term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Blue
+:highlight OSSPC term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Red
+:highlight OSMPC term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=LightGreen
+:highlight OSTemp term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Green
+:highlight OSSuport term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=SeaGreen
 :highlight link OSSuport1 OSSuport
-:highlight OSForce term=standout ctermfg=1 ctermbg=7 guifg=Black guibg=Purple
-:highlight OSMoment term=standout ctermfg=1 ctermbg=7 guifg=Black guibg=Cyan
-:highlight OSTLoad term=standout ctermfg=1 ctermbg=7 guifg=Black guibg=LightCyan
-:highlight OSDLoad term=standout ctermfg=1 ctermbg=7 guifg=Black guibg=SlateBlue
+:highlight OSForce term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Purple
+:highlight OSMoment term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Cyan
+:highlight OSTLoad term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=LightCyan
+:highlight OSDLoad term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=SlateBlue
+:highlight OSNLParm term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=DarkCyan
+:highlight OSWeight term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=SlateBlue
 
 " Subcase Colours
 :highlight OSSubcase term=standout ctermfg=1 ctermbg=7 guifg=Black guibg=Cyan
@@ -338,6 +420,10 @@
 " Fixed Field Colours
 :highlight OSField1 term=standout ctermfg=0 ctermbg=7 guifg=DarkGreen guibg=White
 :highlight OSField2 term=standout ctermfg=1 ctermbg=7 guifg=DarkBlue guibg=Grey
+
+" Includes
+:highlight link OSInclude1 OSField1
+:highlight link OSInclude2 OSField2
 
 " Design Equations
 :highlight link OSDeqatn1 OSField1
@@ -362,3 +448,16 @@
 
 :highlight link OSEndData OSBeginBulk
 
+" Set up tab spacing (8 spaces)
+:set tabstop=8
+:set expandtab
+
+" Folds
+:set foldmethod=expr
+" Nodes
+":set foldexpr=strlen(substitute(substitute(getline(v:lnum),'\\s','',\"g\"),'[^GRID].*','',''))
+" Elements
+":set foldexpr=strlen(substitute(substitute(getline(v:lnum),'\\s','',\"g\"),'[^CTRIA3].*','',''))
+":set foldexpr=strlen(substitute(substitute(getline(v:lnum),'\\s','',\"g\"),'[^CTRIA6].*','',''))
+":set foldexpr=strlen(substitute(substitute(getline(v:lnum),'\\s','',\"g\"),'[^CQUAD4].*','',''))
+":set foldexpr=strlen(substitute(substitute(getline(v:lnum),'\\s','',\"g\"),'[^CQUAD8].*','',''))
