@@ -9,9 +9,9 @@ For editing Altair Optistruct fixed format files, 8 characters per field.
 
 To use:
  
-add filetype.vim to C:\Program Files\Vim\vim63  -> allows vim to autoselect profile for .fem & .bdf files
-add optistruct.vim to C:\Program Files\Vim\vim63\syntax -> profile
-add synmenu.vim to C:\Program Files\Vim\vim63  -> adds optistruct profile to the syntax menu
+add filetype.vim to /usr/share/vim  -> allows vim to autoselect profile for .fem & .bdf files
+add synmenu.vim to /usr/share/vim  -> adds optistruct profile to the syntax menu
+add optistruct.vim to /usr/share/vim/syntax -> profile
 
 Note:
 The only change to filetype.vim is the additional line:
